@@ -26,6 +26,8 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private boolean enabled;
 
+    @OneToOne
+    @JoinColumn(name = "role_id")
     private Role role;
 
     @Override
